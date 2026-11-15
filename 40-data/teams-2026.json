@@ -1,0 +1,280 @@
+{
+ "_note": "球團資料表的來源檔。估值：Forbes〈The NFL's Most Valuable Teams 2026〉（Forbes Australia 轉載，原文 2026-09-09 刊於 forbes.com），企業價值＝股權＋淨負債。球場與私募基金各附來源；pe_holders 為 null 代表沒有查到經證實的基金入股，不代表確定沒有。匯入： python3 ledger.py team set …（見 README）。",
+ "retrieved": "2026-11-15",
+ "valuation_source": "https://www.forbes.com.au/news/sport/the-nfls-most-valuable-teams-2026/",
+ "valuation_date": "2026-09-10",
+ "teams": [
+  {
+   "team": "Dallas Cowboys",
+   "valuation_usd_b": 17,
+   "stadium": "AT&T Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Los Angeles Rams",
+   "valuation_usd_b": 13.5,
+   "stadium": "SoFi Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "New York Giants",
+   "valuation_usd_b": 12,
+   "stadium": "MetLife Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "New England Patriots",
+   "valuation_usd_b": 10.6,
+   "stadium": "Gillette Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": [
+    "Sixth Street"
+   ],
+   "pe_source": "https://www.sportcal.com/news/nfl-approves-minority-stake-sales-for-giants-49ers-patriots/"
+  },
+  {
+   "team": "San Francisco 49ers",
+   "valuation_usd_b": 10.5,
+   "stadium": "Levi's Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Miami Dolphins",
+   "valuation_usd_b": 10.4,
+   "stadium": "Hard Rock Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": [
+    "Ares Management"
+   ],
+   "pe_source": "https://fortune.com/2024/12/11/nfl-private-equity-ares-management-arctos-partners-miami-dolphins-buffalo-bills/"
+  },
+  {
+   "team": "New York Jets",
+   "valuation_usd_b": 10.35,
+   "stadium": "MetLife Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Las Vegas Raiders",
+   "valuation_usd_b": 10.3,
+   "stadium": "Allegiant Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Philadelphia Eagles",
+   "valuation_usd_b": 10.25,
+   "stadium": "Lincoln Financial Field",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Atlanta Falcons",
+   "valuation_usd_b": 10.1,
+   "stadium": "Mercedes-Benz Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": [
+    "Arctos (KKR)"
+   ],
+   "pe_source": "https://www.ajc.com/sports/2026/10/falcons-limited-partner-arctos/"
+  },
+  {
+   "team": "Washington Commanders",
+   "valuation_usd_b": 9.8,
+   "stadium": "Northwest Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Chicago Bears",
+   "valuation_usd_b": 9.7,
+   "stadium": "Soldier Field",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Houston Texans",
+   "valuation_usd_b": 9.65,
+   "stadium": "Reliant Stadium",
+   "stadium_source": "https://abc13.com/post/nrg-stadium-home-houston-texans-rodeo-renamed-reliant-august-2026-company-announces/18893525/",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Seattle Seahawks",
+   "valuation_usd_b": 9.6,
+   "stadium": "Lumen Field",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": [
+    "Carlyle",
+    "Dynasty Equity",
+    "Sixth Street"
+   ],
+   "pe_source": "https://frontofficesports.com/article/meet-seahawks-new-minority-owners/"
+  },
+  {
+   "team": "Denver Broncos",
+   "valuation_usd_b": 9.4,
+   "stadium": "Empower Field at Mile High",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Tampa Bay Buccaneers",
+   "valuation_usd_b": 9.1,
+   "stadium": "Raymond James Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Cleveland Browns",
+   "valuation_usd_b": 9,
+   "stadium": "Huntington Bank Field",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": [
+    "Arctos"
+   ],
+   "pe_source": "https://www.sportcal.com/newsletters/arctos-acquires-browns-stake-raiders-stakeholder-divests-in-nfl-scramble"
+  },
+  {
+   "team": "Kansas City Chiefs",
+   "valuation_usd_b": 8.8,
+   "stadium": "Arrowhead Stadium",
+   "stadium_source": "https://www.nfl.com/news/chiefs-drop-geha-field-return-arrowhead-stadium",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Pittsburgh Steelers",
+   "valuation_usd_b": 8.7,
+   "stadium": "Acrisure Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Green Bay Packers",
+   "valuation_usd_b": 8.6,
+   "stadium": "Lambeau Field",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Tennessee Titans",
+   "valuation_usd_b": 8.5,
+   "stadium": "Nissan Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Los Angeles Chargers",
+   "valuation_usd_b": 8.3,
+   "stadium": "SoFi Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": [
+    "Arctos"
+   ],
+   "pe_source": "https://www.chargers.com/news/nfl-approves-arctos-as-los-angeles-chargers-limited-partner"
+  },
+  {
+   "team": "Minnesota Vikings",
+   "valuation_usd_b": 8.25,
+   "stadium": "U.S. Bank Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Baltimore Ravens",
+   "valuation_usd_b": 8.2,
+   "stadium": "M&T Bank Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Buffalo Bills",
+   "valuation_usd_b": 8.15,
+   "stadium": "Highmark Stadium",
+   "stadium_source": "https://www.forbes.com.au/news/sport/the-nfls-most-valuable-teams-2026/",
+   "pe_holders": [
+    "Arctos"
+   ],
+   "pe_source": "https://fortune.com/2024/12/11/nfl-private-equity-ares-management-arctos-partners-miami-dolphins-buffalo-bills/"
+  },
+  {
+   "team": "Carolina Panthers",
+   "valuation_usd_b": 8.1,
+   "stadium": "Bank of America Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Indianapolis Colts",
+   "valuation_usd_b": 8.08,
+   "stadium": "Lucas Oil Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Arizona Cardinals",
+   "valuation_usd_b": 8.06,
+   "stadium": "State Farm Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Jacksonville Jaguars",
+   "valuation_usd_b": 8.05,
+   "stadium": "EverBank Stadium",
+   "stadium_source": "https://www.jaguars.com/news/jaguars-provide-2026-stadium-and-ticketing-updates",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Detroit Lions",
+   "valuation_usd_b": 8.04,
+   "stadium": "Ford Field",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "New Orleans Saints",
+   "valuation_usd_b": 8.02,
+   "stadium": "Caesars Superdome",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  },
+  {
+   "team": "Cincinnati Bengals",
+   "valuation_usd_b": 8,
+   "stadium": "Paycor Stadium",
+   "stadium_source": "https://en.wikipedia.org/wiki/List_of_current_NFL_stadiums",
+   "pe_holders": null,
+   "pe_source": null
+  }
+ ]
+}

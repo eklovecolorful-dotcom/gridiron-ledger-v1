@@ -349,6 +349,15 @@ class TestSite(Base):
             self.assertIn('<script src="%sassets/site.js"' % root, page)
             self.assertNotIn('href="assets/', page)
 
+    def test_build_base_url_and_out_override(self):
+        out = self.tmp / "site-alt"
+        code, msg = run(self.tmp, "build", "--base-url", "https://alt.example.net", "--out", str(out))
+        self.assertEqual(code, 0, msg)
+        self.assertIn("https://alt.example.net/", (out / "sitemap.xml").read_text(encoding="utf-8"))
+        self.assertIn('class="brand" href="/"', (out / "404.html").read_text(encoding="utf-8"))
+        self.assertFalse((self.tmp / "site").exists())
+        self.assertEqual(self.home.config()["base_url"], "https://example.com")  # config file untouched
+
 
 class TestReportRules(Base):
     def events(self, rows):

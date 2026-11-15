@@ -252,7 +252,8 @@ def cmd_link(a, home):
 
 def cmd_build(a, home):
     con = home.connect()
-    b, drafts = site_mod.build(home, con)
+    out = Path(a.out).resolve() if a.out else None
+    b, drafts = site_mod.build(home, con, out=out, base_url=a.base_url)
     sync_usage(home, con)
     print("網站已產生 Site built: %s（%d 篇已核准文章，%d 個頁面）" % (b.out, len(drafts), len(b.pages)))
     print("  訂閱模式：%s" % b.adapter.status())
@@ -546,7 +547,9 @@ def build_parser():
     s = add("link", cmd_link, "產生並記錄追蹤連結")
     s.add_argument("content_id")
     s.add_argument("--platform", choices=PLATFORMS, required=True)
-    add("build", cmd_build, "產生靜態網站 site/")
+    s = add("build", cmd_build, "產生靜態網站 site/")
+    s.add_argument("--base-url", help="覆寫 ledger.config.json 的 base_url（例如部署到第二個網址時）")
+    s.add_argument("--out", help="輸出資料夾，預設 site/")
     s = add("serve", cmd_serve, "本機預覽 site/")
     s.add_argument("--port", type=int, default=8000)
     s = add("publish", cmd_publish, "發布（寫出待貼稿；不呼叫任何外部 API）")

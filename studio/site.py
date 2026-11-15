@@ -62,9 +62,11 @@ def _png(size, path):
 
 
 class Builder:
-    def __init__(self, home, con, out=None):
+    def __init__(self, home, con, out=None, base_url=None):
         self.home, self.con = home, con
         self.cfg = home.config()
+        if base_url:
+            self.cfg["base_url"] = base_url
         self.out = out or (home / "site")
         self.base = self.cfg["base_url"].rstrip("/")
         self.adapter, self.sub_warning = pick(self.cfg)
@@ -419,8 +421,8 @@ class Builder:
         (self.out / ".nojekyll").write_text("", encoding="utf-8")
 
 
-def build(home, con, out=None, quiet=False):
-    b = Builder(home, con, out)
+def build(home, con, out=None, quiet=False, base_url=None):
+    b = Builder(home, con, out, base_url)
     if b.out.exists():
         shutil.rmtree(b.out)
     b.out.mkdir(parents=True)
