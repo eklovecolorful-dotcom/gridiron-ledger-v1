@@ -1,0 +1,72 @@
+{
+  "_note": "ledger check 的去 AI 化規則。可增減 banned_phrases；fail_threshold 是幾項沒過就算 FAIL（預設 1），rewrite_threshold 是幾項沒過就提示退回重寫（藍圖 5.3 是 3）。number_allowlist 是含數字但不算數據的名稱。",
+  "fail_threshold": 1,
+  "rewrite_threshold": 3,
+  "banned_phrases": [
+    "值得注意的是",
+    "總而言之",
+    "深入探討",
+    "全面解析",
+    "賦能",
+    "無縫",
+    "引領",
+    "綜上所述",
+    "讓我們一起",
+    "不可或缺",
+    "眾所周知",
+    "無限機遇",
+    "delve",
+    "in today's fast-paced",
+    "it's worth noting",
+    "it is worth noting",
+    "in conclusion",
+    "game-changer",
+    "seamless",
+    "unlock the power",
+    "ever-evolving",
+    "navigate the landscape",
+    "a testament to",
+    "let's dive in"
+  ],
+  "banned_patterns": [
+    {
+      "label": "不僅……更……",
+      "regex": "不僅[^。！？\\n]{0,40}更"
+    },
+    {
+      "label": "在……的時代",
+      "regex": "在[^。，！？\\n]{1,14}的時代"
+    }
+  ],
+  "scaffold_groups": [
+    [
+      "首先",
+      "其次",
+      "再者",
+      "最後"
+    ],
+    [
+      "firstly",
+      "secondly",
+      "thirdly",
+      "lastly"
+    ]
+  ],
+  "opening_chars": 2,
+  "min_sentences_for_rhythm": 6,
+  "min_sentence_cv": 0.35,
+  "first_hand_markers": [
+    "own",
+    "watched",
+    "visited"
+  ],
+  "change_mind_heading": "(改口|改變看法|change my mind)",
+  "change_mind_min_chars": 12,
+  "placeholder_tokens": [
+    "【待填"
+  ],
+  "number_allowlist": [
+    "49ers",
+    "76ers"
+  ]
+}

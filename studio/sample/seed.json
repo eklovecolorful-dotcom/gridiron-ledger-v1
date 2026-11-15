@@ -1,0 +1,145 @@
+{
+ "_note": "範例種子資料。facts 只收任務說明中提供並附來源的事實；teams 只有附來源的格子有值，其他留白。",
+ "facts": [
+  {
+   "key": "vote",
+   "claim": "2024 年 8 月，NFL 球東以 31 比 1 表決通過開放私募基金入股，唯一反對的是 Bengals",
+   "number": 31,
+   "unit": "票贊成",
+   "source_url": "https://frontofficesports.com/article/nfl-private-equity-mlb-nba/",
+   "source_name": "Front Office Sports",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "cap",
+   "claim": "私募基金在單一 NFL 球隊的持股上限為 10%",
+   "number": 10,
+   "unit": "%",
+   "source_url": "https://frontofficesports.com/article/nfl-private-equity-mlb-nba/",
+   "source_name": "Front Office Sports",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "mlbnba",
+   "claim": "MLB 與 NBA 允許單一基金持有球隊最多 20% 股權",
+   "number": 20,
+   "unit": "%",
+   "source_url": "https://frontofficesports.com/article/nfl-private-equity-mlb-nba/",
+   "source_name": "Front Office Sports",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "six_teams",
+   "claim": "一家基金最多可同時持有 6 支 NFL 球隊的股份",
+   "number": 6,
+   "unit": "支球隊",
+   "source_url": "https://frontofficesports.com/article/nfl-private-equity-mlb-nba/",
+   "source_name": "Front Office Sports",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "hold",
+   "claim": "私募基金買進後至少須持有 6 年",
+   "number": 6,
+   "unit": "年",
+   "source_url": "https://frontofficesports.com/article/nfl-private-equity-mlb-nba/",
+   "source_name": "Front Office Sports",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "novote",
+   "claim": "私募基金入股 NFL 球隊不會取得投票權",
+   "number": null,
+   "unit": "",
+   "source_url": "https://frontofficesports.com/article/nfl-private-equity-mlb-nba/",
+   "source_name": "Front Office Sports",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "noplan",
+   "claim": "NFL 目前沒有立即調高私募基金持股上限的計畫",
+   "number": null,
+   "unit": "",
+   "source_url": "https://frontofficesports.com/article/nfl-private-equity-mlb-nba/",
+   "source_name": "Front Office Sports",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "cowboys",
+   "claim": "Forbes 2026：Dallas Cowboys 估值 170 億美元（17 billion USD）",
+   "number": 170,
+   "unit": "億美元",
+   "source_url": "https://www.forbes.com.au/?p=205992",
+   "source_name": "Forbes",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "avg",
+   "claim": "Forbes 2026：NFL 球隊平均估值 95 億美元（9.5 billion USD）",
+   "number": 95,
+   "unit": "億美元",
+   "source_url": "https://www.forbes.com.au/?p=205992",
+   "source_name": "Forbes",
+   "retrieved_at": "2026-11-15"
+  },
+  {
+   "key": "growth",
+   "claim": "Forbes 2026：NFL 球隊平均估值比 2025 年高 34%",
+   "number": 34,
+   "unit": "%",
+   "source_url": "https://www.forbes.com.au/?p=205992",
+   "source_name": "Forbes",
+   "retrieved_at": "2026-11-15"
+  }
+ ],
+ "teams": [
+  "Arizona Cardinals",
+  "Atlanta Falcons",
+  "Baltimore Ravens",
+  "Buffalo Bills",
+  "Carolina Panthers",
+  "Chicago Bears",
+  "Cincinnati Bengals",
+  "Cleveland Browns",
+  "Dallas Cowboys",
+  "Denver Broncos",
+  "Detroit Lions",
+  "Green Bay Packers",
+  "Houston Texans",
+  "Indianapolis Colts",
+  "Jacksonville Jaguars",
+  "Kansas City Chiefs",
+  "Las Vegas Raiders",
+  "Los Angeles Chargers",
+  "Los Angeles Rams",
+  "Miami Dolphins",
+  "Minnesota Vikings",
+  "New England Patriots",
+  "New Orleans Saints",
+  "New York Giants",
+  "New York Jets",
+  "Philadelphia Eagles",
+  "Pittsburgh Steelers",
+  "San Francisco 49ers",
+  "Seattle Seahawks",
+  "Tampa Bay Buccaneers",
+  "Tennessee Titans",
+  "Washington Commanders"
+ ],
+ "team_facts": [
+  {
+   "team": "Dallas Cowboys",
+   "valuation_usd_b": 17.0,
+   "valuation_source": "https://www.forbes.com.au/?p=205992",
+   "valuation_date": "2026-11-15"
+  }
+ ],
+ "predictions": [
+  {
+   "game_id": "LEAGUE",
+   "claim": "【範例】下一次球東年度會議結束前，NFL 不會把私募基金的單隊持股上限調高。",
+   "made_at": "2026-11-15",
+   "note": "範例預判，示範登記格式；請改成你自己的判讀。"
+  }
+ ]
+}

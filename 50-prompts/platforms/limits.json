@@ -1,0 +1,9 @@
+{
+  "_note": "字數上限。threads 與 linkedin 來自藍圖；其餘是起始預設值，請依各平台現行規定調整。",
+  "threads": 500,
+  "linkedin": 400,
+  "fb": 300,
+  "ig_caption": 300,
+  "ig_card": 60,
+  "email_preheader": 60
+}

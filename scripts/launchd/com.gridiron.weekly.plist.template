@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  範本 TEMPLATE — 不會自動安裝，也還不能直接用。
+  用途：每週五 11:30 產生每週總表、備份會員名單，並跳出複盤提醒。
+
+  安裝步驟（自己動手，確認路徑後再做）：
+    1. 把下面兩處 /ABSOLUTE/PATH/TO/gridiron-ledger-v1 換成你的實際路徑。
+    2. 存成 ~/Library/LaunchAgents/com.gridiron.weekly.plist
+    3. launchctl load ~/Library/LaunchAgents/com.gridiron.weekly.plist
+  移除：launchctl unload ~/Library/LaunchAgents/com.gridiron.weekly.plist
+
+  注意：Mac 在排定時間若是睡眠狀態，launchd 會在喚醒後補跑一次。
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.gridiron.weekly</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string>
+    <string>/ABSOLUTE/PATH/TO/gridiron-ledger-v1/scripts/weekly.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>5</integer>
+    <key>Hour</key><integer>11</integer>
+    <key>Minute</key><integer>30</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/ABSOLUTE/PATH/TO/gridiron-ledger-v1/reports/weekly.log</string>
+  <key>StandardErrorPath</key>
+  <string>/ABSOLUTE/PATH/TO/gridiron-ledger-v1/reports/weekly.log</string>
+</dict>
+</plist>

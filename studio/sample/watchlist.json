@@ -1,0 +1,29 @@
+{
+ "_note": "本週觀賽單。每週改 week_id、label 與 items，再執行 ledger build。",
+ "sample": true,
+ "week_id": "sample",
+ "label": "範例週",
+ "title": "看球時留意這幾件事",
+ "items": [
+  {
+   "id": "motion",
+   "text": "開球前：進攻組有沒有人橫向位移（motion）？防守跟著動了嗎？"
+  },
+  {
+   "id": "third",
+   "text": "第三檔：防守派了幾個人衝傳？自己數一次。"
+  },
+  {
+   "id": "redzone",
+   "text": "進到紅區：跑還是傳？記下你猜的，再看結果。"
+  },
+  {
+   "id": "clock",
+   "text": "半場結束前兩分鐘：暫停是誰喊的，為什麼？"
+  },
+  {
+   "id": "note",
+   "text": "賽後：寫一句你原本以為、結果不是的事。"
+  }
+ ]
+}

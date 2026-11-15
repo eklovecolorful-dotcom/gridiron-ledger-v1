@@ -1,0 +1,10 @@
+# 範本 TEMPLATE — cron 範例，不會自動安裝。macOS 建議用 launchd 範本；想用 cron 再參考這個。
+# 安裝：crontab -e，貼上下面兩行，並把路徑換成你的實際路徑。
+# 欄位：分 時 日 月 星期（5 = 週五）。時間是你這台電腦的時區（台灣時間）。
+
+# 週五 11:30：備份會員名單 + 產生每週總表 + 複盤提醒
+30 11 * * 5  /bin/sh /ABSOLUTE/PATH/TO/gridiron-ledger-v1/scripts/weekly.sh >> /ABSOLUTE/PATH/TO/gridiron-ledger-v1/reports/weekly.log 2>&1
+
+# 每月第一個週日 20:00：月度決策提醒（涵蓋 28 天）
+# （cron 的「日」與「星期」同時指定時是「或」的關係，所以用 date 判斷星期日）
+0 20 1-7 * *  [ "$(date +\%u)" = 7 ] && cd /ABSOLUTE/PATH/TO/gridiron-ledger-v1 && python3 ledger.py report --days 28 >> reports/weekly.log 2>&1

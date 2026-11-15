@@ -1,0 +1,4 @@
+#!/bin/sh
+# 球場帳本 wrapper: add this folder to PATH, or run ./bin/ledger <command>
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+exec python3 "$DIR/ledger.py" "$@"
