@@ -336,6 +336,19 @@ class TestSite(Base):
         self.assertTrue(rows[0][2].startswith("https://"))
         self.assertEqual(self.con().execute("SELECT COUNT(*) FROM teams").fetchone()[0], 32)
 
+    def test_404_links_are_absolute_under_base_path(self):
+        import json
+        for base, root in (("https://user.github.io/repo/", "/repo/"), ("https://example.org", "/")):
+            cfg = self.home.config()
+            cfg["base_url"] = base
+            self.home.config_path.write_text(json.dumps(cfg, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(run(self.tmp, "build")[0], 0)
+            page = (self.tmp / "site" / "404.html").read_text(encoding="utf-8")
+            self.assertIn('href="%sassets/site.css"' % root, page)
+            self.assertIn('<a class="brand" href="%s">' % root, page)
+            self.assertIn('<script src="%sassets/site.js"' % root, page)
+            self.assertNotIn('href="assets/', page)
+
 
 class TestReportRules(Base):
     def events(self, rows):

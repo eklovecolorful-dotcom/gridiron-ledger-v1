@@ -1,0 +1,31 @@
+{
+  "_note": "base_url 與 contact_email 是占位值 PLACEHOLDER，上線前請改成你自己的。",
+  "brand_zh": "球場帳本",
+  "brand_en": "Gridiron Ledger",
+  "tagline_zh": "用投資人與領隊的眼睛看 NFL",
+  "tagline_en": "The NFL, read by an investor and a tour leader.",
+  "base_url": "https://eklovecolorful-dotcom.github.io/gridiron-ledger-v1",
+  "contact_email": "hello@example.com",
+  "author": "",
+  "benchmark_hourly_ntd": 400,
+  "tools_monthly_ntd": 1500,
+  "fact_stale_days": 180,
+  "subscribe": {
+    "mode": "waitlist",
+    "_modes": "waitlist（可用）| vocus（填 vocus_url 後為外連）| ecpay、newebpay（v1 未串接 NOT CONNECTED）",
+    "vocus_url": ""
+  },
+  "events_endpoint": "",
+  "rules": {
+    "_note": "以下門檻是起始假設，不是量測值；請依實際資料調整。",
+    "min_sample": 30,
+    "window_days": 28,
+    "click_to_signup_min": 0.03,
+    "signup_to_open_min": 0.3,
+    "open_to_paid_min": 0.02,
+    "cancel_to_paid_max": 0.3,
+    "platform_hours_min": 2.0,
+    "platform_signups_per_hour_min": 1.0,
+    "inquiry_pillar_share_min": 0.5
+  }
+}

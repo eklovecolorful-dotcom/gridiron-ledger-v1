@@ -5,6 +5,7 @@ import json
 import shutil
 import struct
 import zlib
+from urllib.parse import urlsplit
 
 from . import md
 from .core import PILLARS, PLATFORMS, today
@@ -73,9 +74,10 @@ class Builder:
 
     # ---------- shell ----------
     def page(self, path, title, desc, body, og_type="website", noindex=False, canonical=None,
-             body_attrs="", sitemap=True):
+             body_attrs="", sitemap=True, root=None):
+        # root: fixed prefix for links, for pages served at unknown URLs (404.html)
         depth = path.count("/")
-        rel = "../" * depth
+        rel = root if root is not None else "../" * depth
         url = self.base + "/" + (path[:-len("index.html")] if path.endswith("index.html") else path)
         canonical = canonical or url
         brand = "%s %s" % (self.cfg["brand_zh"], self.cfg["brand_en"])
@@ -388,9 +390,13 @@ class Builder:
         self.page("offline.html", "目前離線", "目前沒有網路。",
                   '<div class="wrap narrow"><section class="article"><h1>目前離線</h1><p>這一頁還沒存到你的裝置。<a href="watchlist/">本週觀賽單</a>離線也能用。</p></section></div>',
                   noindex=True, sitemap=False)
+        # The host serves 404.html at whatever URL was missed, so relative links would
+        # resolve against that URL. Use absolute paths from base_url (works under a
+        # sub-path such as GitHub Pages' /<repo>/).
+        root = urlsplit(self.base).path.rstrip("/") + "/"
         self.page("404.html", "找不到這一頁", "找不到這一頁。",
-                  '<div class="wrap narrow"><section class="article"><h1>找不到這一頁</h1><p>連結可能已更動。<a href="/">回首頁</a></p></section></div>',
-                  noindex=True, sitemap=False)
+                  '<div class="wrap narrow"><section class="article"><h1>找不到這一頁</h1><p>連結可能已更動。<a href="%s">回首頁</a></p></section></div>' % esc(root),
+                  noindex=True, sitemap=False, root=root)
 
     def finish(self):
         urls = []

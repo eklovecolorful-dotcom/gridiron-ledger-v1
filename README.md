@@ -143,7 +143,7 @@ python3 ledger.py fact correct 3 --number 12
 
 - **Vercel**：`npx vercel deploy site --prod`，或在後台匯入 repo 時 Framework 選 Other、Output Directory 填 `site`、Build Command 留空。
 - **Netlify**：把 `site/` 資料夾拖進 app.netlify.com 的 Deploys 頁，或 `npx netlify deploy --dir=site --prod`。
-- **GitHub Pages**：把 `site/` 的內容推到 `gh-pages` 分支。頁面之間都用相對路徑，放在子路徑下也能用。
+- **GitHub Pages**：執行 `sh scripts/deploy.sh`，它會重跑 `build`，再把 `site/` 的內容推到 origin 的 `gh-pages` 分支（不推資料庫）。頁面之間都用相對路徑，放在子路徑下也能用；`base_url` 要填含 repo 名稱的完整網址，例如 `https://<帳號>.github.io/<repo>`，404 頁才連得回首頁。
 
 `.gitignore` 預設不把 `site/` 與資料庫放進版本控制。要讓主機從 repo 自動部署，就把 `.gitignore` 裡的 `site/` 那一行拿掉；資料庫與 `40-data/.salt` 不要公開。
 
@@ -210,6 +210,6 @@ python3 ledger.py build && python3 ledger.py serve
 python3 -m unittest discover -s tests
 ```
 
-Deploy by uploading the `site/` folder to Vercel, Netlify or GitHub Pages; there is no build step on the host. Set `base_url` and `contact_email` in `ledger.config.json` first.
+Deploy by uploading the `site/` folder to Vercel, Netlify or GitHub Pages (`sh scripts/deploy.sh` builds and pushes to the `gh-pages` branch); there is no build step on the host. Set `base_url` and `contact_email` in `ledger.config.json` first.
 
 **Known limits:** the sample facts were entered from the brief and not re-verified online here; the fact gate checks Arabic numerals only; lint is pattern matching; platform rewrites are mechanical cuts; decision-rule thresholds are starting assumptions; tested on Linux/Python 3.13 only, not yet on a Mac or on a phone.
