@@ -7,3 +7,6 @@ __pycache__/
 40-data/backups/
 reports/
 site/
+# seed-sample 產生的副本，以及每週自己更新的觀賽單
+20-drafts/SAMPLE-pe.md
+40-data/watchlist.json
