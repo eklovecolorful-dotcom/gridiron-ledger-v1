@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /go/
+
+Sitemap: https://eklovecolorful-dotcom.github.io/gridiron-ledger-v1/sitemap.xml
